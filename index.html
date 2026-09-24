@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Josh is reading</title>
+<meta name="description" content="The books Josh is reading right now, and the ones he finished recently.">
+<meta property="og:title" content="What Josh is reading">
+<meta property="og:description" content="The books on Josh's nightstand right now.">
+<meta property="og:image" content="https://hectrvictorious.github.io/reading/reading-now.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 7c4-2 8-2 12 1v18c-4-3-8-3-12-1z' fill='%232F4A3A'/%3E%3Cpath d='M28 7c-4-2-8-2-12 1v18c4-3 8-3 12-1z' fill='%232F4A3A' opacity='.7'/%3E%3C/svg%3E">
+<style>
+@font-face { font-family: "Lora"; src: url("fonts/Lora-Variable.ttf") format("truetype"); font-weight: 400 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Lora"; src: url("fonts/Lora-Italic-Variable.ttf") format("truetype"); font-weight: 400 700; font-style: italic; font-display: swap; }
+:root {
+  --paper: #f6eedb; --paper-2: #efe3c6; --card: #fffaf0; --ink: #2e261c; --muted: #6b5d4a;
+  --accent: #2F4A3A; --gold: #b08d57; --line: #decfae;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { margin: 0; color: var(--ink); font: 17px/1.55 "Lora", Georgia, "Palatino Linotype", serif;
+  background: radial-gradient(ellipse at center, var(--paper) 55%, var(--paper-2) 100%) fixed; min-height: 100vh; }
+main { max-width: 760px; margin: 0 auto; padding: 48px 20px 64px; }
+header { text-align: center; margin-bottom: 36px; }
+.kicker { margin: 0 0 6px; font: 600 12px/1.4 system-ui, "Segoe UI", sans-serif; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--gold); }
+h1 { margin: 0; font-weight: 600; font-size: clamp(30px, 6vw, 42px); line-height: 1.15; }
+.rule { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 14px; color: var(--gold); }
+.rule::before, .rule::after { content: ""; height: 1px; width: 90px; background: var(--gold); opacity: .8; }
+.now { display: grid; gap: 18px; }
+.book { display: flex; gap: 20px; align-items: flex-start; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 18px; box-shadow: 0 1px 0 rgba(255,255,255,.6) inset, 0 6px 18px rgba(70,50,20,.07); }
+.cover { width: 104px; height: 156px; flex: none; object-fit: cover; border-radius: 3px;
+  box-shadow: 0 6px 14px rgba(40,25,5,.28), 0 0 0 1px rgba(0,0,0,.08); background: #ddd; }
+.plain { display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px;
+  background: var(--accent); color: #efe0b8; font: 600 12px/1.25 "Lora", serif; text-transform: uppercase;
+  letter-spacing: .04em; }
+.info h3 { margin: 2px 0 2px; font-size: 22px; line-height: 1.25; font-weight: 600; }
+.info h3 a, .finished a { color: inherit; text-decoration: none; }
+.info h3 a:hover, .finished a:hover { text-decoration: underline; text-decoration-color: var(--gold); }
+.author { margin: 0 0 8px; font-style: italic; color: var(--muted); }
+.series, .how, .when { margin: 0; font-size: 15px; color: var(--accent); }
+.how, .when { color: var(--muted); }
+.finished { margin-top: 44px; }
+h2 { font-weight: 600; font-size: 20px; margin: 0 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.finished ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.finished li { display: flex; gap: 14px; align-items: center; }
+.mini { width: 38px; height: 57px; flex: none; object-fit: cover; border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(40,25,5,.25); font-size: 6px; padding: 3px; }
+.by { font-style: italic; color: var(--muted); }
+.by::before { content: " \2014  "; font-style: normal; }
+.series-inline { color: var(--muted); font-size: 15px; }
+.date { display: block; font-size: 13px; color: var(--gold); letter-spacing: .02em; }
+.empty { text-align: center; font-style: italic; color: var(--muted); }
+footer { margin-top: 48px; text-align: center; font-size: 13px; color: var(--muted); }
+@media (max-width: 520px) {
+  main { padding-top: 32px; }
+  .series-inline { display: block; }
+  .book { gap: 14px; padding: 14px; }
+  .cover { width: 78px; height: 117px; }
+  .info h3 { font-size: 19px; }
+}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="kicker">Updated September 24, 2026</p>
+    <h1>What Josh is reading</h1>
+    <div class="rule" aria-hidden="true">&#10070;</div>
+  </header>
+  <section class="now" aria-label="Reading now">
+      <article class="book">
+        <div class="cover plain" aria-hidden="true"><span>The Fellowship of the Ring</span></div>
+        <div class="info">
+          <h3><a href="https://www.goodreads.com/search?q=The+Fellowship+of+the+Ring+J.R.R.+Tolkien" rel="noopener">The Fellowship of the Ring</a></h3>
+          <p class="author">J.R.R. Tolkien</p>
+          <p class="series">The Lord of the Rings, Book 1</p><p class="how">Listening on audiobook</p>
+        </div>
+      </article>
+      <article class="book">
+        <img class="cover" src="covers/the-butcher-s-masquerade-f73c5776.jpg" alt="Cover of The Butcher’s Masquerade" loading="lazy">
+        <div class="info">
+          <h3><a href="https://www.goodreads.com/search?q=The+Butcher%27s+Masquerade+Matt+Dinniman" rel="noopener">The Butcher’s Masquerade</a></h3>
+          <p class="author">Matt Dinniman</p>
+          <p class="series">Dungeon Crawler Carl, Book 5</p>
+        </div>
+      </article>
+  </section>
+  <footer>Thanks for stopping by. Book recommendations are always welcome!</footer>
+</main>
+</body>
+</html>
